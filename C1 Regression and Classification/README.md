@@ -96,6 +96,9 @@ def compute_gradient(x, y, w, b):
 ```
 [This Lab](C1_W1_Lab04_Gradient_Descent_Soln.ipynb) showcases all the previous functions and formulas and uses them in a gradient descent learning algorithm to predict the cost of a hose given its size in square feet.
 
+To review and practice what I learnt in this module I went back to an [old project](https://github.com/MohammedAljudaibi/TMDB-Analysis-DAND2) and I made a [simple linear prediction model](https://github.com/MohammedAljudaibi/MachineLearningS/blob/main/C1%20Regression%20and%20Classification/TMDb%20Gradient%20Descent%20.ipynb) to predict how much revenue a movie would make given its average movie rating. 
+
+![image](https://user-images.githubusercontent.com/121340570/228288723-954589b1-e62a-4d63-b5b2-fdbb8817d988.png)
 
 ## Module 2
 
