@@ -101,5 +101,42 @@ To review and practice what I learnt in this module I went back to an [old proje
 ![image](https://user-images.githubusercontent.com/121340570/228288723-954589b1-e62a-4d63-b5b2-fdbb8817d988.png)
 
 ## Module 2
+### Multiple Linear Regression
+In most cases you're going to need more than one input variable to make an accurate prediction model, in that case multiple w's are going to be needed, one for each input variable x(i). These should be stored in numpy ndarray as computation with them is much more efficient than using python for loops.
+
+![image](https://user-images.githubusercontent.com/121340570/228391451-cd476c63-df4f-41e3-9276-630c7e3e9220.png)
+
+### Feature Scaling
+Features that are too large or too small can cause linear regression to take longer to run, therefore its beneficial to rescale to features and have them all around 0 or 1, for example by dividing each feature by the max in said feature. Rescaling or normalization can be done in two more ways, mean normalization and Z-score normalization.
+Z-score normalization formulas and code:
+
+![image](https://user-images.githubusercontent.com/121340570/228393806-b3618027-3486-4b4a-8424-80a9f934e8ae.png)
+
+```python
+def zscore_normalize_features(X):
+    """
+    computes  X, zcore normalized by column
+    
+    Args:
+      X (ndarray (m,n))     : input data, m examples, n features
+      
+    Returns:
+      X_norm (ndarray (m,n)): input normalized by column
+      mu (ndarray (n,))     : mean of each feature
+      sigma (ndarray (n,))  : standard deviation of each feature
+    """
+    # find the mean of each column/feature
+    mu     = np.mean(X, axis=0)                 # mu will have shape (n,)
+    # find the standard deviation of each column/feature
+    sigma  = np.std(X, axis=0)                  # sigma will have shape (n,)
+    # element-wise, subtract mu for that column from each example
+    #  then divide by std for that column
+    X_norm = (X - mu) / sigma      
+
+    return (X_norm, mu, sigma)
+```
+
+### Graded Lab 
+This module ended with a [graded lab](C1_W2_Linear_Regression.ipynb) where I made the compute_cost function and the compute_gradient function for a restaurant to predict its profit for a particular city given the city's population size
 
 ## Module 3
