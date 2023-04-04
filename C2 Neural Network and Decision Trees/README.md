@@ -1,13 +1,14 @@
  # Table of Contents
  - [Module 1](#module-1)
- -- [Neural Network](#neural-network)
- --
+ - - [Neural Network](#neural-network)
+ - -
  - [Module 2](#module-2)
- -- []()
+ - - []()
  - [Module 3](#module-3)
- -- []()
+ - - []()
  - [Module 4](#module-4)
- -- []()
+ - - []()
+ 
  # Module 1
  
  ## Neural Networks
