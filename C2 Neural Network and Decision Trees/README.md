@@ -2,7 +2,7 @@
  - [Module 1](#module-1)
  - - [Neural Network](#neural-network)
  - - [TensorFlow Implementation of NNs](#TensorFlow-Implementation-of-NNs)
- - - [## Graded Lab 1](#Graded-Lab-1)
+ - - [Graded Lab 1](#Graded-Lab-1)
  - [Module 2](#module-2)
  - - []()
  - [Module 3](#module-3)
