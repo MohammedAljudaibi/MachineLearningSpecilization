@@ -1,14 +1,14 @@
 
  # Table of Contents
- - [Module 1](#module_1)
+ - [Module 1](#module-1)
  - - [Linear Regression](#linear-regression)
  - - [Cost Function](#cost-function)
  - - [Gradient Descent](#gradient-descent)
  - [Module 2](#module-2)
  - - [Multiple Linear Regression](#multiple-linear-regression)
  - - [Feature Scaling](#feature-scaling)
- - - [Graded Lab 1](#fraded-lab-1)
- - [Module 3](#module_3)
+ - - [Graded Lab 1](#graded-lab-1)
+ - [Module 3](#module-3)
  - - [Logistic Regression](#logistic-regression)
  - - [Cost Function for Logistic Regression](#cost-function-for-logistic-regression)
  - - [Gradient Descent for Logistic Regression](gradient-descent-for-logistic-regression)
