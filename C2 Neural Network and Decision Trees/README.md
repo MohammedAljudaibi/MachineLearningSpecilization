@@ -102,6 +102,7 @@ The linear function should never be used for neural networks as it basically def
 The Softmax regression algorithm is a generlization of logistic regression, that computes the probability of how each output is likely to be true. To predict more than one class, the final output layer in the NN would need to have more than 1 unit.
 
 The softmax function can be written as:
+
  ![image](https://user-images.githubusercontent.com/121340570/230383860-1dc4fb41-d709-4e01-9b8d-786296af0b86.png)
 
 The code for making a muticlass NN using softmax would look like this
@@ -138,8 +139,7 @@ f_x = tf.nn.softmax(logits)
 ## Optimizing Cost Function
 When using gradient descent to find the minimum of the cost function, when the learning rate is too small then it will take longer to converge, and when the learning rate is too big the function will bounce and may overshoot or diverge away from the minimum
 
-![5: Effect of the learning rate on SGD updates. Too small (left) may... |  Download Scientific Diagram](https://www.researchgate.net/publication/323218981/figure/fig6/AS:594583624884225@1518771191628/Effect-of-the-learning-rate-on-SGD-updates-Too-small-left-may-take-longer-to.png)
-
+![image](https://user-images.githubusercontent.com/121340570/230408188-1740f5b8-a7df-4c18-98ab-0f18be639ab3.png)
 
 The Adam Algorithm (**Ada**ptive **M**oment estimation) works to solve both of these issues. It increase the learning rate when it moves in the same direction, and decreases it when it keeps oscillating.
 
