@@ -8,7 +8,8 @@ The program consists of three courses:
 
 1. Supervised Machine Learning: Regression and Classification
 1. Advanced Learning Algorithms
-1. Unsupervised Learning, Recommenders, Reinforcement Learning
+1. Unsupervised Learning, Recommenders and Reinforcement Learning
+
 Each course includes several modules, and each module has its own set of lectures and assignments. I will organize my work according to the course structure to make it easier to navigate and follow.
 
 ## Tools and Technologies
