@@ -10,7 +10,8 @@
  - - [Additional Layer Types](#Additional-Layer-Types)
  - - [Graded Lab 2](#Graded-Lab-2)
  - [Module 3](#module-3)
- - - []()
+ - - [Evaluating a Model](#Evaluating-a-Model)
+ - - [Bias and Variance](#Bias-and-Variance)
  - [Module 4](#module-4)
  - - []()
 
@@ -160,3 +161,25 @@ The NN correctly classified 4985 images out of a total of 5000.
 
 ![image](https://user-images.githubusercontent.com/121340570/230404877-8d4c946c-3af7-45cf-a9f9-021365a7c49a.png)
 
+# Module 3
+
+## Evaluating a Model
+
+The dataset for a model can be split into training and test sets, and the test test can be further split into cross validation/dev set and test set. The training set should always be the largest set, for example 80% training set, 10% dev test and 10% test set. After training the data, dev set is used to test the cost of the model, and finally test set is used to test the accuracy of the model. 
+
+Test set alone can be used to test the cost and the accuracy but this could lead to generlization and that is why the dev test should be used instead. In [this model evaluation lab](C2W3_Lab_01_Model_Evaluation_and_Selection.ipynb), different models where evaluated, both regression with different orders of polynomiyals, and neural networks with different layers, to find which is has the lowest error and is the better option.
+
+## Bias and Variance
+
+High bias causes **underfitting**, and high variance causes **overfitting**
+
+![Bias and Variance example](https://user-images.githubusercontent.com/121340570/230628739-3eb52700-5813-4d05-9bb0-2eee64b7aac3.PNG)
+
+This simple table shows how the cost or error of the train and dev sets can show if the model is underfitting or overfitting
+
+||underfitting|optimal| overfitting|
+|:---:|:---:|:---:|:---:|
+|J<sub>train</sub>	|high|low|low
+|J<sub>CV</sub>		|high|low|high
+
+While uncommon, it is possible for your model to have both high bias and high variance, this can happen when J<sub>train</sub> is high, and J<sub>CV</sub> is much higher the J<sub>train</sub>. This usually is caused by the model overfit for a portion of the dataset, and then underfit for another portion of the dataset.
