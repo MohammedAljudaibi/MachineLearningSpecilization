@@ -12,6 +12,8 @@
  - [Module 3](#module-3)
  - - [Evaluating a Model](#Evaluating-a-Model)
  - - [Bias and Variance](#Bias-and-Variance)
+ - - [Combatting High Bias and Variance](#Combatting-High-Bias-and-Variance)
+ - - [Machine Learning Development Process](#Machine-Learning-Development-Process)
  - [Module 4](#module-4)
  - - []()
 
@@ -43,7 +45,7 @@ model = Sequential([layer1, layer2, layer3])
 model = Sequential([
 	Dense(units=30, activation='sigmoid') #hidden layer 1
 	Dense(units=20, activation='sigmoid') #hidden layer 2
-	Dense(units=01, activation='sigmoid') #output layer or layer 3
+	Dense(units=1, activation='sigmoid') #output layer or layer 3
 	])
 	
 model.compile( #this function will be explained later
@@ -183,3 +185,29 @@ This simple table shows how the cost or error of the train and dev sets can show
 |J<sub>CV</sub>		|high|low|high
 
 While uncommon, it is possible for your model to have both high bias and high variance, this can happen when J<sub>train</sub> is high, and J<sub>CV</sub> is much higher the J<sub>train</sub>. This usually is caused by the model overfit for a portion of the dataset, and then underfit for another portion of the dataset.
+
+## Combatting High Bias and Variance
+More training data → Fixes high variance
+Less sets of features → Fixes high variance
+Getting more features → Fixes high bias
+Adding polynomial features (x<sub>1</sub>x<sub>2</sub>, x<sub>1</sub><sup>3</sup>) → Fixes high bias
+Decreasing the learning rate → Fixes high bias
+Increasing the learning rate → Fixes high variance
+
+Most of the time if you get a really low variance you'd have a high bias and the same is true for a low bias, for the best you'd want to balance the model bias variance tradeoff, so the model you use isnt too simple or too complex.
+
+Large neural are low bias machines, if the network doesnt do well on the training data making the network bigger would improve it, if it doesnt do well on the dev set, adding more data would improve it.
+A large neural network would do as good or better than a smaller better so long as the regularization is chosen well.
+Adding regularization to a neural network in TensorFlow:
+```py
+model = Sequential([									#0.01 is the learning rate
+	Dense(units=30, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 1
+	Dense(units=20, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 2
+	Dense(units=1, activation='linear', kernel_regularizer=L2(0.01) #output layer or layer 3
+	])
+```
+
+[This lab](C2W3_Lab_02_Diagnosing_Bias_and_Variance.ipynb) shows how bias and variance can be diagonsed.
+
+## Machine Learning Development Process
+ToDo
