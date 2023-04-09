@@ -200,10 +200,10 @@ Large neural are low bias machines, if the network doesnt do well on the trainin
 A large neural network would do as good or better than a smaller better so long as the regularization is chosen well.
 Adding regularization to a neural network in TensorFlow:
 ```py
-model = Sequential([									#0.01 is the learning rate
-	Dense(units=30, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 1
-	Dense(units=20, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 2
-	Dense(units=1, activation='linear', kernel_regularizer=L2(0.01) #output layer or layer 3
+model = Sequential([							#0.01 is the learning rate
+		Dense(units=30, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 1
+		Dense(units=20, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 2
+		Dense(units=1, activation='linear', kernel_regularizer=L2(0.01) #output layer or layer 3
 	])
 ```
 
