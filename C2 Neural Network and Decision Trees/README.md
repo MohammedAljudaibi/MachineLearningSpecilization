@@ -210,4 +210,35 @@ model = Sequential([							#0.01 is the learning rate
 [This lab](C2W3_Lab_02_Diagnosing_Bias_and_Variance.ipynb) shows how bias and variance can be diagonsed.
 
 ## Machine Learning Development Process
+### Iterative Loop
+The best way to improve the accuracy of a model is to follow the iterative loop of machine learning development, to first choose and make the architecture and then train the model, then make diagnostics to see where you can improve the model and then loop back to architecture and repeat the steps.
+
+![image](https://user-images.githubusercontent.com/121340570/231270129-f9d726ac-5141-4ef8-9d94-2cf59e415939.png)
+
+### Error Analysis
+
+One way to improve the accuracy of a system is to manually examine the misclassified outputs and categorizing them into common traits. For example if you had a system that would try to classify an email as spam or not, then you could classify them into many categories, such as, emails that try to steal passwords, emails that try to steal credit card info, emails that have deliberate misspellings. After doing that you can then check which of the missclassified emails are under which category, if you found that emails that try to steal passwords are 40% of the missclassifed emails then you can try to improve the accuracy for just those emails as they take a large portion of the misclassificated emails. This can be done by adding more emails that are trying to steal passwords to the data, or by adding more features that would help.
+
+### Data Augmentation
+Adding more data can usually improve the model and its accuracy, an easy way to do so is by performing data augmentation, by altering the data that you already have. 
+For images you can for example distord the image, zoom in or zoom out, rotate or mirror the image, by doing so you would be adding new data from the existing data that was already there.
+
+![Data augmentation](https://files.readme.io/ebfc7b6-Data_augmentation_methods_for_images.png)
+
+Data augmentation can also be applied to speech recognition, you can to the original audio clip background sounds, or change the pitch of the audio clip, make the audio noisy. This can also be representative to how real audios could be.
+
+### Transfer Learning
+When the data you're working with to make a system is small then transfer learning can be very useful. By using an already trained model for a different task and then only training the output layer in the neural network. This can be very useful in image processing where the first layers basically just work to understand how to interpert the image. 
+Transfer learning is a two step process: 
+1. Supervised pretraining: training a model with a large dataset 
+2. Fine tuning: taking the nueral network for the pretained model and fine tuning it to make it work for your model.
+
+Fine tuning can be done two ways, either by training only the output layer parameters, or training all the parameters
+
+## Error for Skewed Datasets
+For problems when what you are trying to predict or classify is a small percentage of the entire dataset. For exmaple, trying to predict if a person has a rare disease, if 1% of people had that disease, then a system that would always predict the person does not have the disease would be 99% accurate. For problems with a skewed dataset it is better to use **percision** and **recall** to find the error of the model.
+
+![image](https://user-images.githubusercontent.com/121340570/231283175-de3360eb-41f7-49fa-9324-c34d7b43d5de.png)
+
+## Graded Lab 3
 ToDo
