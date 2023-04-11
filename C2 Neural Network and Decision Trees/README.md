@@ -14,6 +14,12 @@
  - - [Bias and Variance](#Bias-and-Variance)
  - - [Combatting High Bias and Variance](#Combatting-High-Bias-and-Variance)
  - - [Machine Learning Development Process](#Machine-Learning-Development-Process)
+ - - - [Iterative Loop](#Iterative-Loop)
+ - - - [Error Analysis](#Error-Analysis)
+ - - - [Data Augmentation](#Data-Augmentation)
+ - - - [Transfer Learning](#Transfer-Learning)
+ - - [Error for Skewed Datasets](#Error-for-Skewed-Datasets)
+ - - [Graded Lab 3](#Graded-Lab-3)
  - [Module 4](#module-4)
  - - []()
 
