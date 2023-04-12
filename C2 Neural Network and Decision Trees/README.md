@@ -49,8 +49,8 @@ model = Sequential([layer1, layer2, layer3])
 #layers do not need to be declared before the sequential function
 #the model can also be used like this:
 model = Sequential([
-	Dense(units=30, activation='sigmoid') #hidden layer 1
-	Dense(units=20, activation='sigmoid') #hidden layer 2
+	Dense(units=30, activation='sigmoid'), #hidden layer 1
+	Dense(units=20, activation='sigmoid'), #hidden layer 2
 	Dense(units=1, activation='sigmoid') #output layer or layer 3
 	])
 	
@@ -99,8 +99,8 @@ For the hidden layers it is best use the ReLU function, it is both faster to com
 The neural network in the Module 1 should now look like this:
 ```py
 model = Sequential([
-	Dense(units=30, activation='relu') #hidden layer 1
-	Dense(units=20, activation='relu') #hidden layer 2
+	Dense(units=30, activation='relu'), #hidden layer 1
+	Dense(units=20, activation='relu'), #hidden layer 2
 	Dense(units=1, activation='sigmoid') #output layer or layer 3
 	])
 ``` 
@@ -117,8 +117,8 @@ The softmax function can be written as:
 The code for making a muticlass NN using softmax would look like this
 ```py
 model = Sequential([
-	Dense(units=30, activation='relu') #hidden layer 1
-	Dense(units=20, activation='relu') #hidden layer 2
+	Dense(units=30, activation='relu'), #hidden layer 1
+	Dense(units=20, activation='relu'), #hidden layer 2
 	Dense(units=1, activation='softmax') #output layer or layer 3
 	])
 
@@ -129,8 +129,8 @@ But this code can lead to computational errors in python when the _z_ is too lar
 
 ```py
 model = Sequential([
-	Dense(units=30, activation='relu') #hidden layer 1
-	Dense(units=20, activation='relu') #hidden layer 2
+	Dense(units=30, activation='relu'), #hidden layer 1
+	Dense(units=20, activation='relu'), #hidden layer 2
 	Dense(units=1, activation='linear') #output layer or layer 3
 	])
 
@@ -207,8 +207,8 @@ A large neural network would do as good or better than a smaller better so long 
 Adding regularization to a neural network in TensorFlow:
 ```py
 model = Sequential([							#0.01 is the learning rate
-		Dense(units=30, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 1
-		Dense(units=20, activation='relu', kernel_regularizer=L2(0.01) #hidden layer 2
+		Dense(units=30, activation='relu', kernel_regularizer=L2(0.01), #hidden layer 1
+		Dense(units=20, activation='relu', kernel_regularizer=L2(0.01), #hidden layer 2
 		Dense(units=1, activation='linear', kernel_regularizer=L2(0.01) #output layer or layer 3
 	])
 ```
@@ -247,4 +247,4 @@ For problems when what you are trying to predict or classify is a small percenta
 ![image](https://user-images.githubusercontent.com/121340570/231283175-de3360eb-41f7-49fa-9324-c34d7b43d5de.png)
 
 ## Graded Lab 3
-ToDo
+This [Graded Lab](C2_W3_Assignment.ipynb) covered how changing the number of layers and neurals in neural network affects its accuracy. 
