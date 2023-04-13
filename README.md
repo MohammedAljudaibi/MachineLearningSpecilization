@@ -6,9 +6,9 @@ Please note that this is a personal repository for my own use and documentation 
 ## Courses
 The program consists of three courses:
 
-1. Supervised Machine Learning: Regression and Classification
-1. Advanced Learning Algorithms
-1. Unsupervised Learning, Recommenders and Reinforcement Learning
+1. [Supervised Machine Learning: Regression and Classification](https://github.com/MohammedAljudaibi/MachineLearningSpecilization/tree/main/C1%20Regression%20and%20Classification)
+1. [Advanced Learning Algorithms: Neural Networks and Decision Trees](https://github.com/MohammedAljudaibi/MachineLearningSpecilization/tree/main/C2%20Neural%20Network%20and%20Decision%20Trees)
+1. [Unsupervised Learning, Recommenders and Reinforcement Learning](https://github.com/MohammedAljudaibi/MachineLearningSpecilization/tree/main/C3%20Unsupervised%20Learning%2C%20Recommenders%2C%20and%20Reinforcement%20Learning)
 
 Each course includes several modules, and each module has its own set of lectures and assignments. I will organize my work according to the course structure to make it easier to navigate and follow.
 
