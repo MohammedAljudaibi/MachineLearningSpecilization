@@ -21,8 +21,12 @@
  - - [Error for Skewed Datasets](#Error-for-Skewed-Datasets)
  - - [Graded Lab 3](#Graded-Lab-3)
  - [Module 4](#module-4)
- - - []()
-
+ - - [Decision Trees](#Decision-Trees)
+ - - [Measuring Purity](#Measuring-Purity)
+ - - - [Information Gain](#Information-Gain)
+ - - [Tree Ensembles](#Tree-Ensembles)
+ - - - [XGBoost](#XGBoost)
+ - - [Graded Lab 4](#-Graded Lab-4)
  # Module 1
  
  ## Neural Networks
@@ -248,3 +252,34 @@ For problems when what you are trying to predict or classify is a small percenta
 
 ## Graded Lab 3
 This [Graded Lab](C2_W3_Assignment.ipynb) covered how changing the number of layers and neurals in neural network affects its accuracy. 
+
+# Module 4
+## Decision Trees
+Decision trees have a hierarchial tree like structure that starts with a root node, progression down the tree leads intro branches by "answering" questions; if X is greater than 70, if Y has ears, etc.
+![What Is a Decision Tree?](https://www.mastersindatascience.org/wp-content/uploads/sites/54/2022/05/tree-graphic.jpg)
+
+## Measuring Purity
+How can the root node and remaining nodes be chosen? For examples lets say you want to make a decision tree model to predict whether your pet is a cat or a dog, the decision tree would then need to learn about all the different breeds of cats and dogs. X cat breed has whiskers, Y dog breed has fluffy fur. When splitting the breeds into cats or dogs, you ideally want to split it into all dogs and cats or as close as you can to get to that, the furthest you can split is an even 50/50 split.
+Entropy measures the impurity of a choice in a split for the cats/dogs example: <sub>p1 is the fraction of examples that are cats</sub>
+
+![image](https://user-images.githubusercontent.com/121340570/231863544-e0ebca11-91c3-44ce-88e8-1a5c198e10b3.png)
+
+Where H(p<sub>1</sub>) is the entropy function and it is defined as:
+![image](https://user-images.githubusercontent.com/121340570/231864639-75e7372f-b096-4d8b-a190-93d0a568543e.png)
+
+### Information Gain
+When deciding which branch nodes to pick, the information gain formula is used instead, and it helps to know when to stop adding more branches. Its formula is as follows:
+
+![image](https://user-images.githubusercontent.com/121340570/231885155-7dc67f5b-5863-49d6-975b-b8eb5716ef1e.png)
+
+## Tree Ensembles
+When making a decision tree, small changes in data can completly change the tree, from root all the way down. An ensemble of trees helps to combat the previously mentioned inconsistency. to make the trees different, sampling with replacment can be used, where all the data is in a metaphorical pool or bag and each data point that is used to learn from is then put back inside the bag to have a chance to be taken again, this also means so data points wont be picked and thats how the trees can be different. 
+This is the general idea of how the **random forest ** algorithm works, the major difference is that the random forest algorithm also randomizes the feature selection.
+
+### XGBoost 
+XGBoost is a powerful open source tree ensemble algorithm that is similar to the random forest algorithm, except it is in an implementation of boosted trees. Boosted trees prioritise misclasssified examples in the previously trained trees, instead of all the data points having an equal chance of being chosen, the misclassified examples will have a bigger chance of being chosen.
+
+[This lab](C2_W4_Lab_02_Tree_Ensemble.ipynb) practiced different tree ensemble methods using scitkit-learn and XGBoost
+
+## Graded Lab 4
+[This fourth graded lab](C2_W4_Decision_Tree_with_Markdown.ipynb) covered how to make decision trees from scratch in python using numpy
