@@ -26,7 +26,7 @@
  - - - [Information Gain](#Information-Gain)
  - - [Tree Ensembles](#Tree-Ensembles)
  - - - [XGBoost](#XGBoost)
- - - [Graded Lab 4](#Graded Lab-4)
+ - - [Graded Lab 4](#Graded-Lab-4)
   # Module 1
  
  ## Neural Networks
