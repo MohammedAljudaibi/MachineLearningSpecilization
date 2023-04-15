@@ -20,7 +20,7 @@
 # Module 1
 
 ## Linear Regression
-Linear regression is a supervised machine learing model that is used to predict the value of variable based on the values of other variables
+Linear regression is a supervised machine learning model that is used to predict the value of variable based on the values of other variables
 
 ![image](https://user-images.githubusercontent.com/121340570/228200933-1d267f88-ca3a-4b48-b9ea-7482c1b1f587.png)
 
@@ -183,7 +183,7 @@ def sigmoid(z):
     return g
 ```
 
-The output of this function will be between 0 and 1, this can be looked at like a percentage, if the output is 0.89 then it can be interpreted as the model predicts with 89% certainty that X is true. a heuristic should be used to predict at which threshold should y=0 be predicted, something such as this:
+The output of this function will be between 0 and 1, this can be looked at as a percentage, if the output is 0.89 then it can be interpreted as the model predicts with 89% certainty that X is true. a heuristic should be used to predict at which threshold should y=0 be predicted, something such as this:
 
 ![image](https://user-images.githubusercontent.com/121340570/228694376-12c0a4a2-e66f-47fd-9918-b24869a475ba.png)
 
