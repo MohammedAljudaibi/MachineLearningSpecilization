@@ -44,6 +44,7 @@ Mean of all features:
 ![image](https://user-images.githubusercontent.com/121340570/235346181-5a78abf2-8b1b-47db-9ec0-09a7c1e9e50e.png)
 
 Variance of all features:
+
 ![image](https://user-images.githubusercontent.com/121340570/235346209-92a7ce3f-529a-40ec-8169-ce994bf6bbc6.png)
 
 ### Choosing Relevant Features
