@@ -1,9 +1,12 @@
  # Table of Contents
  - [Module 1](#module-1)
  - - [Clustering](#Clustering)
- - - [K-means Clustering](#K-means-Clustering)
- - - [Graded Lab 1](Graded-Lab-1)
- - - 
+ - - - [K-means Clustering](#K-means-Clustering)
+ - - - [Graded Lab 1](Graded-Lab-1)
+ - - [Anomaly Detection](#Anomaly-Detection)
+ - - - [Anomaly Detection Algorithm](#Anomaly-Detection-Algorithm)
+ - - - [Choosing Relevant Features](#Choosing-Relevant-Features)
+ - - - [Graded Lab 2](#Graded-Lab-2)
  - [Module 2](#module-2)
  - - 
  - [Module 3](#module-3)
@@ -17,7 +20,7 @@ Example of a cluster plot:
 ![2 K-means clustering | Machine Learning for Biostatistics](https://bookdown.org/tpinto_home/Unsupervised-learning/kmeans.png)
 
 
-## K-means Clustering
+### K-means Clustering
 The K-means algorithm clusters the data points into K clusters using centroids, it first randomally initilizes K centroids and then checks each data point and which centroid it is closest to, it then makes it part of that group. After grouping all the points, the centroids locations are averaged in their own groups, then all the points check which centroid is closest again, this is repeated until the centroids stop moving.
 
 Example of a K-means clustering plot:
@@ -25,9 +28,34 @@ Example of a K-means clustering plot:
 
 ![ML | K-means++ Algorithm - GeeksforGeeks](https://media.geeksforgeeks.org/wp-content/uploads/20190812011831/Screenshot-2019-08-12-at-1.09.42-AM.png)
 
-## Graded Lab 1
+### Graded Lab 1
 [In this lab](C3_W1_KMeans_Assignment.ipynb), K-means clustering was used to compress an image into 16 colors
 
+## Anomaly Detection
+Anomaly detection is used to identify samples that are out of the ordinary and that could be unwanted. For example anomaly detection can be used to identify whether a user in a website is a human or a bot, this can be done by learning how a normal user acts, how many times they log in, how long do they stay on a web page, how many different pages do they visit, etc. Then users can be tested through this to find the probability that they are not humans.
+
+### Anomaly Detection Algorithm
+The probability of an anomaly sample can be found by multiplying the probability of all the features. The probability of a single feature can be found by using Gaussian distribution.
+Estimate for Gaussian distribution in a feature:
+ ![image](https://user-images.githubusercontent.com/121340570/235346056-0b26b9fa-514c-4c18-841c-2e9f95d87bcb.png)
+ 
+Mean of all features:
+
+![image](https://user-images.githubusercontent.com/121340570/235346181-5a78abf2-8b1b-47db-9ec0-09a7c1e9e50e.png)
+
+Variance of all features:
+![image](https://user-images.githubusercontent.com/121340570/235346209-92a7ce3f-529a-40ec-8169-ce994bf6bbc6.png)
+
+### Choosing Relevant Features
+Choosing the right features is important in anamoly detection. To choose the right features you can manuelly look through the features and pick the ones that seem relevant and then plot them in a histogram. 
+If the plotted histogram looks bell shaped, that means it has normal distribution and will work well. If the hist does not have a bell shape, then you should engineer the feature to make the hist have a bell shape, this can be done in many ways, some of which are: 
+1. x<sub>1</sub> → log(x<sub>1</sub>+C)
+2. x<sub>2</sub> → x<sub>2</sub><sup><1/C></sup>
+
+### Graded Lab 2
+[This lab](C3_W1_Anomaly_Detection.ipynb) covered how anomaly detection can be implemented in python
+
+ 
  # Module 2
  
  # Module 3
