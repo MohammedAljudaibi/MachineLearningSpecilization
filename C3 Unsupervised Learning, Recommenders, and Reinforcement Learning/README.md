@@ -8,7 +8,11 @@
  - - - [Choosing Relevant Features](#Choosing-Relevant-Features)
  - - - [Graded Lab 2](#Graded-Lab-2)
  - [Module 2](#module-2)
- - - 
+ - - [Recommender Systems](#Recommender-Systems)
+ - - [Collaborative Filtering](#Collaborative-Filtering)
+ - - - [Collaborative Filtering Graded Lab](#Collaborative-Filtering-Graded-Lab)
+ - - [Content-Based Filtering](#Content-Based-Filtering)
+ - - - [Content-Based Filtering Graded Lab](#Content-Based-Filtering-Graded-Lab)
  - [Module 3](#module-3)
  - -
  
@@ -57,6 +61,21 @@ If the plotted histogram looks bell shaped, that means it has normal distributio
 [This lab](C3_W1_Anomaly_Detection.ipynb) covered how anomaly detection can be implemented in python
 
  
- # Module 2
- 
+# Module 2
+## Recommender Systems
+Recommender systems are widely used commercially, they for example are used to recommend youtube videos, netflix movies, or to suggest products to users. Recommender systems can be implemented into two main ways, using only the users own data, such as what movies he liked and didnt like and what where the genres, this is known as [Content-Based Filtering](#Content-based-filtering). Or they can be implemented using other peoples data and how other people with similar interests rated the movie, this is known as [Collaborative Filtering](#Collaborative-filtering).
+
+## Collaborative Filtering
+Collaborative filtering works by using the preferences of similar users to offer recommendations to a specific user. In the example of movie recommendations, a collaborative filtering approach would generate two vectors: 
+For each user, a 'parameter vector' that embodies the movie tastes of a user. For each movie, a feature vector of the same size which embodies some description of the movie. The dot product of the two vectors plus the bias term should produce an estimate of the rating the user might give to that movie.
+
+### Collaborative Filtering Graded Lab
+[This lab](C3_W2_Collaborative_RecSys_Assignment.ipynb) solved how a collaborative filtering approach can be used to predict a users rating of a movie they had not yet watched.
+
+## Content-Based Filtering
+Content-based filtering uses the features of a user to recommend items to the same user, this is most commonly used on online advertisments. When a user clicks on a specific link or makes a specific purchase the advertisment agency is more likely to recommend similar products to the user.
+
+### Content-Based Filtering Graded Lab
+[This lab](C3_W2_RecSysNN_Assignment.ipynb) practices what was taught in the lectures on how content-based filtering can be used to make recommendations
+
  # Module 3
