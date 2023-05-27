@@ -17,7 +17,7 @@
  - - [Reinforcement Learning](#Reinforcement-Learning)
  - - [State-Action Value Function](#State-Action-Value-Function)
  - - [Continuous State Spaces](#Continuous-State-Spaces)
- - - [Final Project: Lunar Lander](#Final-Project:-Lunar-Lander)
+ - - [Final Project: Lunar Lander](#Final-Project-Lunar-Lander)
  
 # Module 1
 ## Clustering
