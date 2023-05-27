@@ -14,7 +14,10 @@
  - - [Content-Based Filtering](#Content-Based-Filtering)
  - - - [Content-Based Filtering Graded Lab](#Content-Based-Filtering-Graded-Lab)
  - [Module 3](#module-3)
- - -
+ - - [Reinforcement Learning](#Reinforcement-Learning)
+ - - [State-Action Value Function](#State-Action-Value-Function)
+ - - [Continuous State Spaces](#Continuous-State-Spaces)
+ - - [Final Project: Lunar Lander](#Final-Project:-Lunar-Lander)
  
 # Module 1
 ## Clustering
@@ -79,3 +82,44 @@ Content-based filtering uses the features of a user to recommend items to the sa
 [This lab](C3_W2_RecSysNN_Assignment.ipynb) practices what was taught in the lectures on how content-based filtering can be used to make recommendations
 
  # Module 3
+
+## Reinforcement Learning
+Reinforcement learning aims to learn an intelligent agent to do tasks without instructing it exactly how to do them, but instead by rewarding and punishing them depending on how they preform.
+
+## State-Action Value Function
+Also known as the Q function, it specifies how rewarding actions should be to the agent, taking into account the agent's current state. [This practice lab](State-action value function example.ipynb) visualised the Q function.
+
+## Continuous State Spaces
+Unlike a discrete state space that updates state variables at discrete time intervals, a continuous state space's state variables change continuously.
+
+## Final Project: Lunar Lander
+For the final project in the AI specilization course, I was instructed to make a lunar lander sucessfuly land on the moon, specifically train it to descend from just over the moons surface into a landing pad and.
+
+The lunar lander has four possible actions:
+- Do nothing
+- Left Thrust
+- Right Thrust
+- Main Thrust
+
+And its state space variables matrix would be 1x8 matrix:
+
+1. x : how far left or right is it
+2. y : how far up or down is it
+3. x' : its speed in the x direction
+4. y' : its speed in the y direction
+5. θ : its angle
+6. θ' : its angular velocity
+7. L : is the left leg touching the surface of the moon
+8. R : is the right leg touching the surface of the moon
+
+Its reward function is:
+
+- Getting on the landing pad: between 140 and 100 depending on how centered it is
+- Additional reward for moving towards or away from the pad
+- Crash: -100
+- Soft landing: +100
+- Leg grounded: +10
+- Fire main engine: -0.3  <sub> Punishes the use of thrusters to save fuel</sub>
+- Fire side thruster: -0.03
+
+Finally, after outlining the state matrix and reward function I solved the [Lunar Lander assignment](C3_W3_A1_Assignment.ipynb)
